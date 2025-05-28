@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Quick GitHub Publish Rule
+
+To publish this project as a new public GitHub repository with minimal interaction, run the following command in the project root:
+
+```
+gh repo create <repo-name> --public --source=. --remote=origin --push
+```
+
+- Replace `<repo-name>` with your desired repository name (or use the folder name).
+- The command will prompt you to authenticate with GitHub if you haven't already.
+- This will:
+  - Create a new public repository on your GitHub account
+  - Set it as the remote named `origin`
+  - Push your current code to GitHub
+
+After running, your repository URL will be shown in the output. You can share this link with others.
+
+**Requirements:**
+- [GitHub CLI (`gh`)](mdc:https:/cli.github.com) must be installed and authenticated.
+- Your project should already be a git repository (run `git init` if not).
+- All changes should be committed before running the command.
